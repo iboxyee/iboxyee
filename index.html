@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Source HTML dari URL</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>View Source HTML dari URL</h1>
+        <div class="input-group">
+            <input type="text" id="urlInput" placeholder="Masukkan URL halaman web">
+            <button onclick="viewSource()">Lihat Source</button>
+        </div>
+
+        <div class="button-group">
+            <button class="btn-download" onclick="downloadSource()">Unduh Source</button>
+            <button class="btn-copy" onclick="copySource()">Salin Teks</button>
+            <button class="btn-lightbox" onclick="openLightbox()">Tampilkan di Lightbox</button>
+        </div>
+
+        <pre><code id="sourceOutput" class="language-html" readonly></code></pre>
+        
+        <div class="article">
+            <h2><i class="fas fa-lightbulb"></i> Tentang Tool Ini</h2>
+            <p>Tool ini memungkinkan Anda untuk melihat source HTML dari halaman web mana pun dengan memasukkan URL halaman tersebut.</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        Dibuat oleh ChatGPT - 2024
+    </div>
+
+    <div class="lightbox" id="lightbox">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <iframe id="lightboxIframe" src="" frameborder="0"></iframe>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
